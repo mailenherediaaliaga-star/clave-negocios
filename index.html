@@ -179,10 +179,12 @@
       padding: 0 24px 24px;
       box-shadow: 0 7px 22px rgba(31, 59, 42, .04);
     }
-    .service:nth-last-child(-n+2) { grid-column: span 6; }
     .service-media { position: relative; height: 168px; margin: 0 -24px 28px; background: var(--surface-2); }
     .service-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(14, 59, 40, .2), transparent 48%); pointer-events: none; }
     .service-media img { width: 100%; height: 100%; display: block; object-fit: cover; }
+    .pos-visual { display:grid; place-items:center; overflow:hidden; background:var(--green-2); }
+    .pos-visual svg { width:100%; height:100%; }
+    .service-benefit { display:block; margin-top:9px; color:var(--green); font-weight:700; }
     .service-icon { position:absolute; z-index:1; left:24px; bottom:-22px; width:45px; height:45px; display:grid; place-items:center; border:3px solid var(--surface); border-radius:12px; color:var(--green); background:var(--gold-soft); box-shadow:0 6px 15px rgba(18,45,30,.14); }
     .service-icon svg { width: 22px; height: 22px; }
     .service h3 { font-size: 1.25rem; margin-bottom: 9px; }
@@ -504,6 +506,39 @@
             <h3>Tiendas online</h3>
             <p>Creación de tiendas en internet con catálogo, carrito de compras y opciones de pago adaptadas a cada negocio.</p>
           </article>
+          <article class="service">
+            <div class="service-media pos-visual" role="img" aria-label="Sistema de punto de venta con caja, inventario y reportes en estilo verde y dorado">
+              <svg viewBox="0 0 600 300" aria-hidden="true">
+                <defs>
+                  <linearGradient id="pos-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0e3b28"/><stop offset="1" stop-color="#18553a"/></linearGradient>
+                  <linearGradient id="pos-gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4dc92"/><stop offset="1" stop-color="#d6a73b"/></linearGradient>
+                </defs>
+                <rect width="600" height="300" fill="url(#pos-bg)"/>
+                <circle cx="548" cy="-12" r="126" fill="none" stroke="#d6a73b" stroke-opacity=".22" stroke-width="35"/>
+                <path d="M0 248C120 198 208 278 330 228s184-19 270-61v133H0Z" fill="#0a2d1d" opacity=".72"/>
+                <g transform="translate(128 60)">
+                  <rect x="0" y="0" width="236" height="150" rx="15" fill="#f5f7f1" stroke="#d6a73b" stroke-width="7"/>
+                  <rect x="20" y="20" width="196" height="77" rx="8" fill="#dce6dc"/>
+                  <path d="M39 81V60M69 81V46M99 81V67M129 81V35M159 81V53M189 81V27" stroke="#18553a" stroke-width="13" stroke-linecap="round"/>
+                  <rect x="43" y="112" width="150" height="21" rx="10" fill="url(#pos-gold)"/>
+                  <path d="M77 150h82l15 32H62Z" fill="#d6a73b"/>
+                  <rect x="43" y="178" width="150" height="16" rx="8" fill="#f4dc92"/>
+                </g>
+                <g transform="translate(392 92)">
+                  <rect width="110" height="150" rx="15" fill="url(#pos-gold)"/>
+                  <rect x="17" y="20" width="76" height="43" rx="6" fill="#0e3b28" opacity=".9"/>
+                  <g fill="#18553a"><circle cx="29" cy="88" r="8"/><circle cx="55" cy="88" r="8"/><circle cx="81" cy="88" r="8"/><circle cx="29" cy="115" r="8"/><circle cx="55" cy="115" r="8"/><circle cx="81" cy="115" r="8"/></g>
+                  <path d="M23 137h64" stroke="#18553a" stroke-width="8" stroke-linecap="round"/>
+                </g>
+                <g fill="none" stroke="#efd37f" stroke-width="4" stroke-linecap="round">
+                  <path d="M51 63h54M51 79h35"/><path d="M489 53c14-18 43-18 57 0M500 65c9-10 26-10 35 0"/>
+                </g>
+              </svg>
+              <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 4h16v13H4zM7 7h10v4H7zM7 14h2M12 14h2M17 14h.01M8 20h8"/></svg></div>
+            </div>
+            <h3>Punto de venta y gestión</h3>
+            <p>Instalamos, configuramos y te capacitamos para controlar ventas, inventario con alertas de stock bajo, múltiples cajas, reportes de ventas y estados financieros simples desde un solo lugar.<span class="service-benefit">Funciona sin internet en instalación local, ideal para Cuba y los apagones; también hay opción en la nube para varias sucursales.</span></p>
+          </article>
         </div>
         <p class="open-invite">¿Tu negocio necesita otro servicio? Escríbenos y lo resolvemos.</p>
       </div>
@@ -646,6 +681,14 @@
           <details class="faq-item">
             <summary>¿Cómo empezamos?</summary>
             <div class="faq-answer"><p>Escríbenos por WhatsApp y cuéntanos sobre tu negocio. Revisamos lo que necesitas y acordamos el alcance, el precio exacto y la fecha antes de comenzar.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>¿El sistema de punto de venta funciona sin internet?</summary>
+            <div class="faq-answer"><p>Sí. En instalación local trabaja sin internet; solo necesitas una computadora y tus dispositivos.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>¿Qué necesito para empezar con el punto de venta?</summary>
+            <div class="faq-answer"><p>Conversamos por WhatsApp, evaluamos tu negocio y te decimos exactamente qué hace falta. La instalación toma de 30 minutos a 2 horas.</p></div>
           </details>
         </div>
       </div>
